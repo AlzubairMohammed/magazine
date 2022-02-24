@@ -1,6 +1,8 @@
 <template>
   <v-carousel v-model="model"
-  height="400"
+  height="300"
+  class="mt-10"
+  id="carousel"
   >
     <v-carousel-item
       v-for="(color, i) in colors"
@@ -39,3 +41,8 @@
     }),
   }
 </script>
+<style scoped>
+#carousel{
+  margin-top: 56px !important;
+}
+</style>
