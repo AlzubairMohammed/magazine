@@ -1,44 +1,23 @@
 <template>
   <v-layout>
     <v-app-bar id="appBar" density="compact" fixed>
-      <img src="../../assets/brand/Untitled-2.png" id="logo" alt="">
+      <img height="30" width="0" src="../../../../logo5.svg" id="logo">
       <v-spacer></v-spacer>
       <i class="fas fa-search" v-if="x"></i>
         <div id="search" class="mr-3 mt-5 p-5">
           <v-text-field @focus="x=false" @blur="x=true">
         </v-text-field>
         </div>
-      <v-menu
-      open-on-hover
-      top 
-      offset-y
-    >
-      
-      <template v-slot:activator="{ on, attrs }">
-        <v-btn
-          color="blue"
-          dark
-          v-bind="attrs"
-          v-on="on"
-        >
-         الاقسام
-        </v-btn>
-      </template>
-
-      <v-list>
-        <v-list-item
-          v-for="(item, index) in items"
-          :key="index"
-        >
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-menu>
+      <v-btn
+      color="#006c6e"
+      :to="{name: 'login'}"
+      ><span>تسجيل</span></v-btn>
       <v-btn
         class="mr-4 ml-5 mt-0"
-        color="blue"
+        color="#006c6e"
+        :to="{name: 'register'}"
       >
-        <v-icon left>mdi-handshake-outline</v-icon>
+        <v-icon color="white" left>mdi-handshake-outline</v-icon>
 
         <span>انضم الينا</span>
       </v-btn>
@@ -75,8 +54,9 @@
   margin-bottom: 4px !important;
 }
 #logo{
-  width: 100px !important;
-  height: 50px !important;
+  width: 150px !important;
+  height: 150px !important;
+  margin-top: 10px;
 }
 #search{
   width: 615px !important;
@@ -86,5 +66,8 @@ i {
   margin-left: 280px;
   position: absolute;
   color: rgb(165, 161, 161);
+}
+span{
+  color: white;
 }
 </style>

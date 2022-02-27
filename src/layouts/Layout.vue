@@ -12,6 +12,7 @@
 <script>
 import Header from "./header/AppBar.vue";
 import Footer from "./footer/Footer";
+
 export default {
   name: "Layout",
 

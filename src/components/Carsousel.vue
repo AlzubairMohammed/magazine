@@ -1,6 +1,6 @@
 <template>
   <v-carousel v-model="model"
-  height="300"
+  height="280"
   class="mt-10"
   id="carousel"
   >
@@ -32,7 +32,7 @@
     data: () => ({
       model: 0,
       colors: [
-        'primary',
+        '#006c6e',
         'secondary',
         'yellow darken-2',
         'red',

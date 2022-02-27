@@ -7,7 +7,8 @@
         flat
         tile
         width="100%"
-        class="blue lighten-1 text-center"
+        class="text-center"
+        color="#006c6e"
       >
         <v-card-text>
           <v-btn
@@ -16,7 +17,7 @@
             class="mx-4"
             icon
           >
-            <v-icon size="24px">
+            <v-icon color="white" size="24px">
               {{ icon }}
             </v-icon>
           </v-btn>

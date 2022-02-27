@@ -1,12 +1,10 @@
 <template>
     
     <div>
-        <Carsousel/>
-        
-        <v-container>
+        <v-container class="mt-16">
             <v-row>
-             <v-col cols="12" sm="12" md="12" lg="12" xl="12">
-                  <Switcher/>
+            <v-col cols="12" sm="12" md="12" lg="12" xl="12">
+                <Switcher/>
             </v-col>
             <v-col
             cols="4"
@@ -50,13 +48,11 @@
 
 <script>
 import Cards from '../components/Card.vue'
-import Carsousel from '../components/Carsousel.vue'
-import Pagination from '../layouts/pagination/Pagination.vue'
+import Pagination from "../layouts/pagination/Pagination.vue";
 import Switcher from '../components/switcher.vue'
 export default {
     components: {
         Cards,
-        Carsousel,
         Pagination,
         Switcher
     }

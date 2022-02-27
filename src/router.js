@@ -14,7 +14,7 @@ export default new Router({
             //Components
             {
                 name: 'home',
-                path: 'home',
+                path: '/',
                 component: () => import('./views/Home.vue'),
             },
             {
@@ -27,7 +27,17 @@ export default new Router({
                 path: 'login',
                 component: () => import('./views/Login.vue'),
             },
-
+            {
+                name: 'singlePost',
+                path: 'singlePost',
+                component: () => import('./views/SinglePost.vue'),
+            },
+            {
+                name: 'category',
+                path: 'category',
+                component: () => import('./views/Category.vue'),
+            },
+            
             // {
             //     name: 'Profile',
             //     path: 'pages/profile',
