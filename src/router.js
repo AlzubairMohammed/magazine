@@ -64,6 +64,39 @@ export default new Router({
 
         ]
     },
+    {
+        path: '/dashboard',
+        component: () => import('../dashboard/Layout.vue'),
+        // children: [
+        //     //Components
+        //     {
+        //         name: 'home',
+        //         path: '/',
+        //         component: () => import('./views/Home.vue'),
+        //     },
+        //     {
+        //         name: 'register',
+        //         path: 'register',
+        //         component: () => import('./views/Register.vue'),
+        //     },
+        //     {
+        //         name: 'login',
+        //         path: 'login',
+        //         component: () => import('./views/Login.vue'),
+        //     },
+        //     {
+        //         name: 'singlePost',
+        //         path: 'singlePost',
+        //         component: () => import('./views/SinglePost.vue'),
+        //     },
+        //     {
+        //         name: 'category',
+        //         path: 'category',
+        //         component: () => import('./views/Category.vue'),
+        //     },
+            
+        // ]
+    },
 
 ],
 })

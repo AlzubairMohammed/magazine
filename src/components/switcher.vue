@@ -4,7 +4,7 @@
       background-color=""
       show-arrows
     >
-      <v-tabs-slider color="#006c6e"></v-tabs-slider>
+      <v-tabs-slider color="#3dbb95"></v-tabs-slider>
 
       <v-tab
         v-for="i in ['شعر','رسومات','صور فتوغرافية','قصص قصيرة','نصوص ادبية','فيديوهات قصيرة','مفطتفات رياضية','الحضارة السودانية','ملخصات كتب','الرئيسية']"
@@ -26,6 +26,6 @@
 <style scoped>
 #titleId{
   text-decoration: none;
-  color:#006c6e;
+  color:black;
 }
 </style>

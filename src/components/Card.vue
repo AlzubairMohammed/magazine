@@ -7,7 +7,7 @@
       cols="4"
       >
         <v-img
-        src="./../../../e2.jpg"
+        src="./../../../ex5.jpeg"
         id="postImage"
         :to="{name: 'singlePost'}"
         >
@@ -58,7 +58,7 @@ span{
   margin-left: 50px;
 }
 #textContent{
-  color:#006c6e;
+  color:black;
   text-align: right;
   padding-top: 8px !important;
 }

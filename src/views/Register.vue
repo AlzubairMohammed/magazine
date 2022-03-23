@@ -29,8 +29,7 @@
           label="اكتب وجهة نظرك بالنسبة للمجلة"
           reverse
           rows="3"
-          class="text-right"
-          style="width:438px;margin-left:45px;"
+          class="text-right textClass"
           >
           </v-textarea>
 
@@ -69,4 +68,15 @@ export default {
 span{
   color: white;
 }
+ .textClass{
+  
+  margin-right: 18px;
+  margin-left: 50px;
+}
+/*
+@media only screen and (max-width: 600px){
+	.textClass{
+  width:13.5rem;
+}
+} */
 </style>
