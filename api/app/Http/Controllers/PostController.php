@@ -21,8 +21,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        $brands = Post::select('*')->with('author:*')->get();
-        return new PostResource($brands);
+        $posts = Post::select('*')->with('author:*')->get();
+        return response()->json([
+            'status' => true,
+            'posts' => $posts
+          ]);
     }
 
     /**

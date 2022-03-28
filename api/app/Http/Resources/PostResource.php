@@ -23,6 +23,7 @@ class PostResource extends JsonResource
         'postContent'=>$this->postContent,
         'likesNumber'=>$this->likesNumber,
         'section'=>$this->section,
+        'author' => new AuthorResource($this->author),
         'created_at'=>$this->created_at,
     ];
 }
