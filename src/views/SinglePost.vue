@@ -56,19 +56,11 @@
 <script>
 import Switcher from '../components/switcher.vue'
 export default {
-  mounted() {
-    this.$store.dispatch('fetchPost',this.$store.state.singlePostId)
-  },
   props:{
   },
   components: {
     Switcher
   },
-  computed: {
-    // post: ()=>{
-    //   return 
-    // }
-  }
 }
 </script>
 

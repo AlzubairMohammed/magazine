@@ -1,31 +1,40 @@
-import axios from 'axios'
-const state = {
-  products: [],
-};
+import axios from "axios";
 
-const getters = {
-  allProducts: (state) => {
-    return state.products;
-  },
-};
 
-const actions = {
-  async fetchPosts({ commit }) {
-    const response = await axios.get(
-      "http://127.0.0.1:8000/api/posts"
-    );
-    commit("setPosts", response.data);
-  },
-};
 
-const mutations = {
-  setProducts: (state, products) => {
-    state.products = products;
-  },
-};
 export default {
-  state,
-  getters,
-  actions,
-  mutations,
-};
+   state : {
+    posts: [],
+    post: [],
+  },
+  
+   getters : {
+    
+  },
+  
+   actions : {
+    async getPosts({ commit }) {
+      await axios.get("http://127.0.0.1:8000/api/posts")
+      .then( response => {
+      commit("setPosts", response.data)
+      }
+        )
+    },
+    async getPost({ commit }, id) {
+      await axios.get(`http://127.0.0.1:8000/api/posts/${id}`)
+      .then( response => {
+      commit("setPost", response.data)
+      }
+        )
+    },
+  },
+  
+   mutations : {
+    setPosts: (state, posts)=> {
+      state.posts = posts.posts
+    },
+    setPost: (state, post)=> {
+      state.post = post
+    },
+  }
+}
