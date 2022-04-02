@@ -1,17 +1,20 @@
 <template>
-  <v-carousel v-model="model"
-  height="280"
-  class="mt-10"
-  id="carousel"
+  <v-carousel
+    cycle
+    height="280"
+    class="mt-10"
+    interval="1000"
+    id="carousel"
+    hide-delimiter-background
+    show-arrows-on-hover
   >
     <v-carousel-item
-      v-for="(color, i) in colors"
-      :key="color"
+      v-for="(slide, i) in slides"
+      :key="i"
     >
       <v-sheet
-        :color="color"
+        :color="colors[i]"
         height="100%"
-        tile
       >
         <v-row
           class="fill-height"
@@ -19,7 +22,7 @@
           justify="center"
         >
           <div class="text-h2">
-            Slide {{ i + 1 }}
+            {{ slide }} Slide
           </div>
         </v-row>
       </v-sheet>
@@ -29,16 +32,24 @@
 
 <script>
   export default {
-    data: () => ({
-      model: 0,
-      colors: [
-        '#006c6e',
-        'secondary',
-        'yellow darken-2',
-        'red',
-        'orange',
-      ],
-    }),
+    data () {
+      return {
+        colors: [
+          'indigo',
+          'warning',
+          'pink darken-2',
+          'red lighten-1',
+          'deep-purple accent-4',
+        ],
+        slides: [
+          'First',
+          'Second',
+          'Third',
+          'Fourth',
+          'Fifth',
+        ],
+      }
+    },
   }
 </script>
 <style scoped>

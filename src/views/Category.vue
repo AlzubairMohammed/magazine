@@ -16,7 +16,7 @@
             <div
             id="advertisementContent"
             >
-
+            {{$store.state.category}}
             </div>
             </v-col>
             <v-col
@@ -26,17 +26,8 @@
             lg="9"
             xl="9"
             >
-            <v-row no-gutters class="mb-3">
-                <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl="6"><Cards/></v-col>
-                <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl="6"><Cards/></v-col>
-                <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl="6"><Cards/></v-col>
-                <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl="6"><Cards/></v-col>
-                <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl="6"><Cards/></v-col>
-                <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl="6"><Cards/></v-col>
-                <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl="6"><Cards/></v-col>
-                <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl="6"><Cards/></v-col>
-                <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl="6"><Cards/></v-col>
-                <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl="6"><Cards/></v-col>
+            <v-row no-gutters class="mb-3" v-if="this.$store.state.posts.posts.category==$route.params.category">
+                <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl="6" v-for="post in this.$store.state.posts.posts" :key="post.id"><Cards :post="post" /></v-col>	
             </v-row>
             <Pagination></Pagination>
             </v-col>
@@ -55,6 +46,9 @@ export default {
         Cards,
         Pagination,
         Switcher
+    },
+    mounted(){
+        console.log(this.$route.params.i);
     }
 }
 </script>

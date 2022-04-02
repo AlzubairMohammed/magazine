@@ -10,11 +10,11 @@
         <v-col  sm="8" md="8" lg="8" xl="8">
             <v-row id="postContentId">
                 <v-col cols="12" sm="12" md="12" lg="12" xl="12">
-                    <v-img id="singlePostImageId" src="./../../../ex5.jpeg"></v-img>
+                    <v-img id="singlePostImageId" :src="require('../../api/storage/app/public/'+$route.params.post.image)"></v-img>
                 </v-col>
                 <v-col cols="12" sm="12" md="12" lg="12" xl="12">
                     <v-card-text>
-                    {{this.$store.state.post}}
+                      {{$route.params.post.postContent}}
                      </v-card-text>
                 </v-col>
                 <v-col cols="12" sm="12" md="12" lg="12" xl="12">
@@ -28,7 +28,7 @@
         </v-list-item-avatar>
 
         <v-list-item-content>
-          <v-list-item-title id="authorNameId"><span>محمد علي</span></v-list-item-title>
+          <v-list-item-title id="authorNameId"><span>{{$route.params.post.authorName}}</span></v-list-item-title>
         </v-list-item-content>
 
         <v-row
@@ -61,6 +61,9 @@ export default {
   components: {
     Switcher
   },
+  computed:{
+    
+  }
 }
 </script>
 

@@ -5,7 +5,7 @@
               v-model="page"
               class=""
               color="#006c6e"
-              :length="15"
+              :length="Math.ceil(this.$store.state.posts.posts.length/10)"
             ></v-pagination>
           
     </div>
@@ -18,6 +18,9 @@
         page: 1,
       }
     },
+    mounted(){
+      
+    }
   }
 </script>
 

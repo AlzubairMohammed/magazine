@@ -14,9 +14,9 @@
       <v-col	
       cols="8"	
       >	
-      <router-link @click="this.$store.dispatch('getPost',post.id)" id="titleId" color="white" :to="{name: 'singlePost'}">{{post.id}}</router-link><br>	
+      <router-link id="titleId" color="white" :to="{name: 'singlePost', params: { post: post}}">{{post.id}}</router-link><br>	
       <v-card-text id="textContent" class="font-weight-regular">
-        {{post.postContent}}	
+         {{this.post.postContent}}	
 
      </v-card-text>	
       </v-col>	
@@ -33,11 +33,7 @@ export default {
 
   }),
   
-  props: {
-      post: {
-        type: String,
-        required: true
-      }},
+  props: ['post']
   
 }
 </script>
