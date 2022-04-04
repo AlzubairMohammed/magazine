@@ -1,9 +1,9 @@
 <template>
-  <div id="cardId overflow-hidden">
+  <div id="cardId">
     <v-row>
       <v-col cols="4">
         <v-img
-          src="../assets/logo.png"
+          :src="require('../assets/images' + post.img)"
           id="postImage"
           :to="{ name: 'singlePost' }"
         >
@@ -17,7 +17,14 @@
           >{{ post.title }}</router-link
         ><br />
         <v-card-text id="textContent" class="font-weight-regular">
-          {{ post.content }}
+          {{ post.content.slice(0, 200) }}
+          <br />
+          <router-link
+            style="text-decoration: none"
+            :to="{ name: 'singlePost', params: { post: post } }"
+          >
+            <big>...</big>
+          </router-link>
         </v-card-text>
       </v-col>
     </v-row>
@@ -37,13 +44,13 @@ export default {
 #postImage {
   margin: 2px 0px -2px 2px;
   height: 195px;
-  border-radius: 17px 0px 0px 17px;
+  /* border-radius: 17px 0px 0px 17px; */
 }
 #cardId {
   margin: 5px;
   height: 200px;
-  border: 1px solid gray;
-  border-radius: 20px;
+  border: 1px solid rgb(209, 209, 209);
+  /* border-radius: 20px; */
 }
 #socailIcons {
   margin-top: 15px;

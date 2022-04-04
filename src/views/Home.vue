@@ -53,6 +53,11 @@ export default {
 
   // },
   props: {},
+  methods: {
+    logger() {
+      console.log(this.$store.state.posts.posts[0].img);
+    },
+  },
 };
 </script>
 

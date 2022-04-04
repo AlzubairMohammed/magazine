@@ -8,7 +8,10 @@
       <v-col sm="8" md="8" lg="8" xl="8">
         <v-row id="postContentId">
           <v-col cols="12" sm="12" md="12" lg="12" xl="12">
-            <v-img id="singlePostImageId" src="../assets/logo.png"></v-img>
+            <v-img
+              id="singlePostImageId"
+              :src="require('../assets/images' + $route.params.post.img)"
+            ></v-img>
           </v-col>
           <v-col cols="12" sm="12" md="12" lg="12" xl="12">
             <v-card-text>

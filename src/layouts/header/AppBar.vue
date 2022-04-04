@@ -1,12 +1,7 @@
 <template>
   <v-layout>
     <v-app-bar id="appBar" density="compact" fixed>
-      <img
-        height="30"
-        width="0"
-        src="../../assets/brand/Untitled-2.png"
-        id="logo"
-      />
+      <img height="30" width="0" src="../../assets/logo5.svg" id="logo" />
       <v-spacer></v-spacer>
       <v-row>
         <v-col id="searchColId" cols="2" sm="1" md="1" lg="1" xl="1">
